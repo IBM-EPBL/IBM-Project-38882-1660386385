@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<div class="container">
+    <div class="row">
+      <div class="col"> 
+  
+  <div class="container p-1">
+  <div class="row justify-content-center p-2 bg-success text-white">
+      <h2>Contact Us Form</h2></div> </div>
+  
+          
+  <div class="row">
+           
+  <div class="col-sm-6"> 
+      <div class="card">
+      <div class="card-body">
+                  <h2 class="card-title">Our Location</h2>
+     
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2006223.649497653!2d78.706355!3d10.856726!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baafa469e37c771%3A0xd44017e1b9c97cee!2sTrichy%20Engineering%20College!5e0!3m2!1sen!2sin!4v1668665143010!5m2!1sen!2sin" width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div> </div> 
+          
+           </div>
+  
+           
+      <div class="col-sm-6"> 
+          <div class="card">
+        <div class="card-body">
+  
+            <form action = "/contact_us" method="post">
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Your Name:</label>
+              <input type="text" name="name" class="form-control" id="recipient-name" required="">
+            </div>
+              
+          <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Your Email:</label>
+              <input type="email" name="email" class="form-control" id="recipient-name" required="">
+            </div>
+              
+           <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Phone:</label>
+              <input type="phone" name="phone" class="form-control" id="recipient-name" required="">
+            </div>
+              
+
+            <div class="form-group">
+              <label class="col-md-12 control-label" for="blood_group" style="font-style: italic;">Request for blood group</label>
+              <div class="col-md-12">
+                <select id="blood_group" name="blood_group" class="form-control">
+                  <option>Select</option>
+                  <option value="A+">A+</option>
+                  <option value="B+">B+</option>
+                  <option value="AB+">AB+</option>
+                  <option value="O+">O+</option>
+                  <option value="A-">A-</option>
+                  <option value="B-">B-</option>
+                  <option value="AB-">AB-</option>
+                  <option value="0-">O-</option>
+                </select>
+              </div>
+            </div>  
+                
+                
+            <div class="form-group">
+              <label for="message-text" class="col-form-label">Message:</label>
+              <textarea class="form-control" id="message" name="message"></textarea>
+            </div>
+                
+              <div class="form-group">
+              <input style="text-align: center; width: 100%;" type="submit" name="submit" value="Submit" class="btn btn-primary">
+            </div>
+                
+          </form>
+              </div></div>
+      
+          </div>        
+            </div> 
+          
+          
+    
+    
+      
+      </div> </div></div>
+
+      {% endblock %}
